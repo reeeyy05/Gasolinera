@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html lang='es'>
+
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
-    <script src='script.js' defer></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='CSS/styles.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
+    <script type="module" src='JS/script.js'></script>
     <title>API-Gasolinera</title>
 </head>
 
 <body>
-    <h1>...</h1>
+    <h1>Consulta de Gasolineras</h1>
+
+    <form id="busqueda">
+        <label for="provincia">Provincia</label>
+        <select id="selectProvincia"></select>
+        <label for="provincia">Municipio</label>
+        <select id="selectMunicipio" disabled></select>
+        <label for="provincia">Combustible</label>
+        <select id="selectCombustible"></select>
+        <button type="submit">Buscar</button>
+    </form>
+
+    <div id="resultados"></div>
 </body>
+
 </html>
