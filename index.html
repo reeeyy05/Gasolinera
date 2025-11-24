@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang='es'>
+<html lang="es">
 
 <head>
     <meta charset='UTF-8'>
@@ -7,23 +7,51 @@
     <link rel='stylesheet' type='text/css' media='screen' href='CSS/styles.css'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.css">
     <script type="module" src='JS/script.js'></script>
-    <title>API-Gasolinera</title>
+    <title>Buscador de Gasolinera</title>
 </head>
 
 <body>
-    <h1>Consulta de Gasolineras</h1>
+    <header>
+        <h1>Buscador de Gasolineras</h1>
+    </header>
 
-    <form id="busqueda">
-        <label for="provincia">Provincia</label>
-        <select id="selectProvincia"></select>
-        <label for="provincia">Municipio</label>
-        <select id="selectMunicipio" disabled></select>
-        <label for="provincia">Combustible</label>
-        <select id="selectCombustible"></select>
-        <button type="submit">Buscar</button>
-    </form>
+    <main>
+        <section class="filtros">
+            <div id="provincia">
+                <label for="select-provincia">Provincia</label>
+                <select id="select-provincia">
+                    <option value="">Seleccione una provincia</option>
+                </select>
+            </div>
 
-    <div id="resultados"></div>
+            <div id="municipio">
+                <label for="select-municipio">Municipio</label>
+                <select id="select-municipio" disabled>
+                    <option value="">Seleccione un municipio</option>
+                </select>
+            </div>
+
+            <div id="combustible">
+                <label for="select-combustible">Tipo de combustible</label>
+                <select id="select-combustible">
+                    <option value="">Seleccione combustible</option>
+                </select>
+            </div>
+
+            <div id="solo-abiertas">
+                <label>
+                    <input type="checkbox" id="check-abiertas">
+                    Solo abiertas
+                </label>
+            </div>
+        </section>
+
+        <section id="buscar">
+            <button id="boton-buscar">Buscar gasolineras</button>
+        </section>
+
+        <section id="resultados"></section>
+    </main>
 </body>
 
 </html>
